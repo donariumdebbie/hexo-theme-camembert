@@ -1,5 +1,7 @@
 webpack_config: 'themes/camembert/webpack.config.js'
 
+favicon: favicon.ico
+
 flow_text: true
 
 cover_image:
