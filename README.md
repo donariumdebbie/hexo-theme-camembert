@@ -16,9 +16,9 @@ Hexo theme powered by camembert cookie!
 
 ## TODO
 
-* [] Complete README.md
-* [] Optimize sources
-* [] i18n
-* [] Automatically optimize image size&quality
-* [] Add thumbnails to post list
-* [] Support category
+* [ ] Complete README.md
+* [ ] Optimize sources
+* [ ] i18n
+* [ ] Automatically optimize image size&quality
+* [ ] Add thumbnails to post list
+* [ ] Support category
