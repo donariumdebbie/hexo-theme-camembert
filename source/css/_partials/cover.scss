@@ -1,0 +1,91 @@
+.cover {
+  height: 100%;
+  top: 0;
+  width: 100%;
+
+  .cover-background {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    .cover-content {
+      background-color: $black-shaded-4;
+      padding: $container-padding;
+
+      * {
+        color: map-get($shades, 'white');
+      }
+
+      a {
+        transition: color .25s;
+
+        &:hover {
+          color: map-get($grey, 'lighten-2');
+
+          &::before {
+            color: map-get($grey, 'lighten-2');
+          }
+        }
+      }
+
+      .metadata {
+        @extend .valign-wrapper;
+
+        &>*:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  &.cover-layout-top {
+    .cover-content {
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &.cover-layout-bottom {
+    .cover-content {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &.cover-layout-left {
+    .cover-content {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &.cover-layout-right {
+    .cover-content {
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &.cover-layout-center {
+    .cover-background {
+      @extend .valign-wrapper;
+
+      .cover-content {
+        margin: auto;
+      }
+    }
+  }
+}

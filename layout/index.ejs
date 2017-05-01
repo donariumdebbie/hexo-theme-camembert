@@ -1,0 +1,15 @@
+<nav class="search-bar">
+  <% if (getConfig('algolia')) { %>
+    <%- partial('_partials/search_bar') %>
+  <% } %>
+</nav>
+<article>
+  <%- partial('_partials/posts', { posts: page.posts }) %>
+</article>
+<% if (is_home()) { %>
+<section>
+  <div class="right-align">
+    <%- partial('_partials/pagination') %>
+  </div>
+</section>
+<% } %>

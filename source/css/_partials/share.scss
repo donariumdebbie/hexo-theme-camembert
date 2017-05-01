@@ -1,0 +1,29 @@
+.share-container {
+  @extend .center;
+  padding: 0 !important;
+
+  .share-wrapper {
+    display: inline-block;
+
+    .hr {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.socials {
+  .jssocials-shares {
+    @extend .flow-text;
+    display: inline-block;
+
+    .jssocials-share-url {
+      .jssocials-share-link {
+        background-color: $black-shaded-3;
+
+        &:hover {
+          background-color: $black-shaded-4;
+        }
+      }
+    }
+  }
+}

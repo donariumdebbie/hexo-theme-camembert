@@ -1,0 +1,26 @@
+<%
+  const label = [
+    'c-b',
+    commercial ? '' : '-n',
+    (() => {
+      if (modifications === 'sa') return '-a';
+      else if (modifications === false) return '-d';
+    })()
+  ].join('');
+
+  const condition = [
+    'by',
+    commercial ? '' : '-nc',
+    (() => {
+      if (modifications === 'sa') return '-sa';
+      else if (modifications === false) return '-nd';
+    })()
+  ].join('');
+%>
+
+<a
+  href="https://creativecommons.org/licenses/<%= condition %>/4.0"
+  class="ccl tooltipped btn-flat"
+  data-position="top"
+  data-delay="50"
+  data-tooltip="This contents licensed under CC <%= _.toUpper(condition) %> 4.0"><%= label %></a>

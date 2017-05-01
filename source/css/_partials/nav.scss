@@ -1,0 +1,31 @@
+nav {
+  @extend .transparent;
+  @extend .z-depth-0;
+  z-index: 1;
+
+  &.pushpin {
+    position: absolute;
+    top: 0;
+  }
+
+  &.pinned {
+    @extend .black;
+    @extend .z-depth-1;
+
+    transition: background .3s;
+  }
+
+  ul {
+    a {
+      &:hover {
+        background-color: $white-shaded-0;
+      }
+    }
+  }
+
+  .avatar {
+    @extend .circle;
+    max-height: $navbar-height / 2;
+    vertical-align: middle;
+  }
+}

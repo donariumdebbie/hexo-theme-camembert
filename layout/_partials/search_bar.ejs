@@ -1,0 +1,45 @@
+<div class="nav-wrapper">
+  <form id="searchForm" action="javascript:;">
+    <div class="input-field">
+      <input type="search" placeholder="Search">
+      <label class="label-icon" for="search">
+        <i class="mdi mdi-magnify"></i>
+      </label>
+      <i class="material-icons mdi mdi-close"></i>
+    </div>
+  </form>
+</div>
+<div id="searchModal" class="modal modal-fixed-footer search-modal">
+  <div class="modal-header">
+    <nav class="search-bar">
+      <div class="nav-wrapper">
+        <form
+          id="algoliaForm"
+          action="javascript:;"
+          data-application-id="<%= getConfig('algolia.applicationID') %>"
+          data-api-key="<%= getConfig('algolia.apiKey') %>"
+          data-index-name="<%= getConfig('algolia.indexName') %>"
+          data-target="#algoliaResult">
+          <div class="input-field">
+            <input type="search" placeholder="Search">
+            <label class="label-icon" for="search">
+              <i class="mdi mdi-magnify"></i>
+            </label>
+          </div>
+        </form>
+        <a href="https://www.algolia.com" class="algolia-logo btn-flat waves-effect" target="_blank">
+          <span>Search by</span>
+          <%- image_tag('/img/algolia/Algolia_logo_bg-white.svg') %>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div class="modal-content">
+    <p id="algoliaEmpty" class="center grey-text hide">No posts found</p>
+    <ul
+      id="algoliaResult"
+      class="posts collection"
+      data-date-format="<%= getConfig('date_format') %>">
+    </ul>
+  </div>
+</div>

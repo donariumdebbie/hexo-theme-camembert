@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'CC Icons';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/cc-icons.ttf?v=#{$mdi-version}') format('truetype');
+}
+
+.ccl {
+  display: inline-block;
+  font-family: 'CC Icons';
+  font-size: 2rem;
+  padding: 0 5px;
+  text-transform: none;
+}

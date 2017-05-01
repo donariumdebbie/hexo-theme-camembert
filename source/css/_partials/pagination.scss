@@ -1,0 +1,9 @@
+.pagination {
+  font-size: 15px;
+
+  li {
+    &.active {
+      background-color: map-get($grey, 'base');
+    }
+  }
+}

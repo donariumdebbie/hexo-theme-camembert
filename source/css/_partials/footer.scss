@@ -1,0 +1,9 @@
+.page-footer {
+  background-color: map-get($grey, 'lighten-3');
+  color: map-get($grey, 'base');
+  padding: 0;
+
+  .footer-copyright {
+    color: map-get($grey, 'darken-1');
+  }
+}

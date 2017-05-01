@@ -1,0 +1,49 @@
+main > .search-bar {
+  margin-top: .5rem;
+}
+
+.search-bar {
+  .input-field {
+    color: $black-shaded-2;
+
+    label {
+      i,
+      &.active > i {
+        color: $black-shaded-2;
+      }
+    }
+  }
+}
+
+.search-modal {
+  .modal-header {
+    @extend .modal-footer;
+
+    bottom: unset;
+    top: 0;
+  }
+
+  .modal-content {
+    bottom: 0;
+    padding: 0;
+
+    .collection {
+      border: none;
+      margin: 0;
+    }
+  }
+
+  .algolia-logo {
+    color: map-get($grey, 'base');
+    padding: 0 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    * {
+      height: 1.5rem;
+      text-transform: none;
+      vertical-align: middle;
+    }
+  }
+}

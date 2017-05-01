@@ -1,0 +1,40 @@
+.hr {
+  align-items: center;
+  color: $black-shaded-3;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1rem 0;
+
+  &::before,
+  &::after {
+    background-color: $black-shaded-2;
+    content: '';
+    flex: 1;
+    height: 1px;
+  }
+
+  &::before {
+    margin-right: .5rem;
+  }
+
+  &::after {
+    margin-left: .5rem;
+  }
+
+  &.left {
+    float: none !important;
+
+    &::before {
+      flex: .05;
+    }
+  }
+
+  &.right {
+    float: none !important;
+
+    &::after {
+      flex: .05;
+    }
+  }
+}

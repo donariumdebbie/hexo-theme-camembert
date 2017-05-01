@@ -1,0 +1,35 @@
+.posts {
+  border: 0;
+
+  li {
+    @extend .transparent;
+    transition: .25s;
+
+    &:hover {
+      background-color: $black-shaded-0 !important;
+    }
+
+    .post-title {
+      @extend .truncate;
+
+      a {
+        color: map-get($shades, 'black');
+      }
+    }
+
+    .post-summary {
+      line-height: 1.5;
+      margin: 0;
+
+      .more {
+        font-size: 75%;
+      }
+    }
+
+    .tag-list {
+      a {
+        color: map-get($grey, 'base');
+      }
+    }
+  }
+}

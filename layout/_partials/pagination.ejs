@@ -1,0 +1,25 @@
+<%
+  const current = page.current;
+  const limit = 5;
+  const offset = Math.floor(current/limit) * limit;
+  const start = 1 + offset;
+  const end = _.min([offset + limit, page.total]);
+  function href(i, label = i) {
+    if (i < 1 || i > page.total || i === current) return 'javascript:;';
+    else if (i === 1) return '/#main';
+    else return `${getConfig('pagination_dir')}/${i}#main`;
+  }
+%>
+<ul class="pagination">
+  <li class="<%= page.prev ? 'waves-effect' : 'disabled' %>">
+    <a href="<%= href(current - 1) %>"><i class="mdi mdi-chevron-left"></i></a>
+  </li>
+  <% for (let i = start; i <= end; i ++) { %>
+  <li class="<%= i === current ? 'active' : 'waves-effect' %>">
+    <a href="<%= href(i) %>"><%= i %></a>
+  </li>
+  <% } %>
+  <li class="<%= page.next ? 'waves-effect' : 'disabled' %>">
+    <a href="<%= href(current + 1) %>"><i class="mdi mdi-chevron-right"></i></a>
+  </li>
+</ul>

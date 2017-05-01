@@ -1,0 +1,8 @@
+<article>
+  <%- page.content %>
+</article>
+<section id="comment" class="thread">
+  <% if (getConfig('disqus')) { %>
+    <%- partial('_partials/comment') %>
+  <% } %>
+</section>

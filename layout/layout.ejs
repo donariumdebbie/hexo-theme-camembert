@@ -1,0 +1,70 @@
+<%
+  const pageIs = (() => {
+    if (is_home()) return 'home';
+    else if (is_post()) return 'post';
+    else if (is_archive()) return 'archive';
+    else if (is_category()) return 'category';
+    else if (is_tag()) return 'tag';
+  })();
+
+  const pageTitle = (() => {
+    if (is_home()) return 'Posts';
+    else if (is_post()) return page.title;
+    else if (is_archive()) return ['Archive', page.year, page.month].filter((i) => !_.isUndefined(i)).join('/');
+    else if (is_category()) return `Category/${page.category}`;
+    else if (is_tag()) return `Tag/${page.tag}`;
+  })();
+
+  const coverLayout = (() => {
+    if (is_home()) return 'center';
+    return page.cover_layout || getConfig('cover_layout.default', 'bottom')
+  })();
+%>
+
+<!DOCTYPE html>
+<html lang="<%=page.lang%>">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title><%= `${pageTitle} | ${config.title}` %></title>
+
+    <%- css('/css/camembert.css') %>
+    <%- favicon_tag(getConfig('favicon')) %>
+    <%- autoCanonical(config, page) %>
+    <%- open_graph({
+      title: pageTitle
+    }) %>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="<%= pageIs %>">
+    <nav class="pushpin" data-target="main">
+      <%- partial('_partials/nav') %>
+    </nav>
+
+    <aside class="menu">
+      <%- partial('_partials/side_nav') %>
+    </aside>
+
+    <header class="cover cover-layout-<%= coverLayout %>">
+      <%- partial('_partials/cover', { pageIs: pageIs, pageTitle: pageTitle }) %>
+    </header>
+
+    <main id="main" class="container <%= getConfig('flow_text', false) ? 'flow-text' : '' %>">
+      <%- body %>
+    </main>
+
+    <footer class="page-footer">
+      <%- partial('_partials/footer') %>
+    </footer>
+
+    <%- js('/js/camembert.js') %>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+.tag-list {
+  @extend .mdi;
+  @extend .mdi-tag-multiple;
+  color: map-get($grey, 'base');
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0;
+
+  .tag-list-item {
+    @extend .btn-flat;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    margin: 0 1px;
+    padding: 0 .2rem;
+
+    * {
+      display: inherit;
+      height: inherit;
+      line-height: inherit;
+      padding: 0;
+    }
+
+    .tag-list-count {
+      @extend sup;
+      top: -.3em;
+
+      &::before {
+        content: '(';
+      }
+
+      &::after {
+        content: ')';
+      }
+    }
+  }
+}

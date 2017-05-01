@@ -1,0 +1,14 @@
+<div class="footer-copyright">
+  <div class="container">
+    <p class="left">
+      © <%= moment().format('YYYY') %> <%= getConfig('author') %>. All rights reserved.
+      <br>Powered by <a href="https://hexo.io">Hexo</a>, <a href="https://github.com/sw-jung/hexo-theme-camembert">Camembert theme.</a>
+    </p>
+    <p class="right">
+      <%- partial('_partials/ccl', {
+        commercial: getConfig('ccl.commercial', false),
+        modifications: getConfig('ccl.modifications', 'sa')
+      }) %>
+    </p>
+  </div>
+</div>

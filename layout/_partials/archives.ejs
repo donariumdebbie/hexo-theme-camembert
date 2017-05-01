@@ -1,0 +1,29 @@
+<%
+  const dateFormat = 'MMM YYYY';
+  const locale = 'en';
+  const archives = _(site.posts.map(post => post)).groupBy(function (post) {
+    return post.date.locale(locale).format(dateFormat);
+  })
+  .toPairs()
+  .orderBy([function (archive) {
+    return moment(archive[0], dateFormat).valueOf();
+  }], ['desc'])
+  .value();
+%>
+<ul class="archive-list">
+  <% _.forEach(archives, function (archive) { %>
+  <%
+    const label = archive[0];
+    const posts = archive[1];
+    const count = posts.length;
+    const date = moment(archive[0], dateFormat).locale(locale);
+    const url = url_for(`archives/${date.format('YYYY')}/${date.format('MM')}`);
+  %>
+  <li class="archive-list-item">
+    <a href="<%= url %>" class="archive-list-link waves-effect">
+      <span><%= label %></span>
+      <sup class="archive-list-count"><%= count %></sup>
+    </a>
+  </li>
+  <% }) %>
+</ul>

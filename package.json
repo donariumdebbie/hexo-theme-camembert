@@ -1,0 +1,39 @@
+{
+  "name": "hexo-theme-camembert",
+  "description": "Hexo theme powered by camembert cookie!",
+  "version": "1.0.0",
+  "author": {
+    "name": "sw-jung",
+    "email": "kjss10@gmail.com",
+    "url": "https://sw-jung.github.io"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "hexo",
+    "blog",
+    "material",
+    "responsive"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sw-jung/hexo-theme-camembert"
+  },
+  "bugs": {
+    "url": "https://github.com/sw-jung/hexo-theme-camembert/issues"
+  },
+  "dependencies": {
+    "algoliasearch": "^3.22.1",
+    "clipboard": "^1.6.1",
+    "hexo-auto-canonical": "^0.1.0",
+    "jssocials": "^1.5.0",
+    "lodash": "^4.17.4",
+    "materialize-css": "^0.98.2",
+    "mdi": "^1.9.33",
+    "striptags": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "sass-lint": "^1.10.2"
+  }
+}

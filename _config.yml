@@ -1,0 +1,12 @@
+webpack_config: 'themes/camembert/webpack.config.js'
+
+flow_text: true
+
+cover_image:
+  default: /img/helloquence-51716.jpg
+  home: /img/rsz_dino-reichmuth-98982.jpg
+
+shares: [twitter, facebook, googleplus, pinterest, url]
+
+profile:
+  background: /img/ray-hennessy-118049.jpg

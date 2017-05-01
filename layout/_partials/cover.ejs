@@ -1,0 +1,38 @@
+<%
+  const coverImage = (() => {
+    if (is_post()) return page.cover_image || getConfig('cover_image.default');
+    else return getConfig(`cover_image.${pageIs}`) || getConfig('cover_image.default');
+  })();
+%>
+<div class="cover-background" style="background-image:url(<%= coverImage %>)">
+  <div class="cover-content">
+    <% if (!is_home()) { %>
+    <h1><%= pageTitle %></h1>
+    <% } %>
+    <% if (is_post()) { %>
+    <div class="metadata">
+      <time><%= date(page.date) %></time>
+      <%- page.tags ? list_tags(page.tags, { show_count: false }) : '' %>
+    </div>
+    <% } else if (is_home()) { %>
+    <div class="center">
+      <img
+        id="profileImage"
+        class="circle"
+        src="<%- gravatar(getConfig('profile.email'), {s: 128}) %>">
+      <h4><%= getConfig('author') %></h4>
+      <p><%= getConfig('profile.comment') %></p>
+      <div class="links">
+        <% _.forEach(getConfig('profile.links'), (link, key) => { %>
+        <a
+          href="<%= link %>"
+          class="mdi mdi-<%= _.toLower(key) %> mdi-24px white-text tooltipped"
+          data-position="bottom"
+          data-delay="50"
+          data-tooltip="<%= key %>"></a>
+        <% }); %>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>

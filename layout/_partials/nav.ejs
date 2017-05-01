@@ -1,0 +1,34 @@
+<div class="nav-wrapper">
+  <ul class="left">
+    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Menu">
+      <a href="javascript:;" class="waves-effect waves-light side-nav-button" data-activates="menu">
+        <i class="mdi mdi-menu"></i>
+      </a>
+    </li>
+    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="About me">
+      <a href="<%= getConfig("profile.page", "#") %>" class="waves-effect waves-light">
+        <img class="avatar" src="<%- gravatar(getConfig("profile.email"), {s: 40}) %>">
+        <span class="hide-on-small-only"><%= getConfig("author") %></span>
+      </a>
+    </li>
+  </ul>
+  <ul class="right">
+    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Share">
+      <a href="javascript:;" class="waves-effect waves-light" data-target="shareModal">
+        <i class="mdi mdi-share-variant"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+<div id="shareModal" class="modal bottom-sheet">
+  <div class="modal-content share-container">
+    <div class="share-wrapper">
+      <div class="hr">Share this page</div>
+      <div
+        class="socials"
+        data-shares="<%=getConfig('shares')%>"
+        data-show-label="false"
+        data-show-count="false" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+@import './_partials/hr';
+@import './_partials/highlight';
+@import './_partials/cover';
+@import './_partials/nav';
+@import './_partials/share';
+@import './_partials/side_nav';
+@import './_partials/tag-list';
+@import './_partials/pagination';
+@import './_partials/search_bar';
+@import './_partials/posts';
+@import './_partials/footer';
+@import './_partials/ccl';
+
+a {
+  color: map-get($teal, 'lighten-1');
+}
+
+time {
+  @extend .mdi;
+  @extend .mdi-calendar;
+  color: map-get($grey, 'base');
+  font-size: 1rem;
+
+  &::before {
+    margin-right: .2rem;
+  }
+}
+
+.mdi-github {
+  @extend .mdi-github-circle;
+}
+
+.collection {
+  border-bottom: 1px solid $collection-border-color;
+  border-top: 1px solid $collection-border-color;
+}
+
+.links {
+  * {
+    display: inline;
+  }
+
+  & > *:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.thread {
+  margin: 3rem 0;
+}
+
+.material-tooltip {
+  max-width: 300px;
+}

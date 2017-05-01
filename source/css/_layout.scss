@@ -1,0 +1,12 @@
+html,
+body {
+  background-color: map-get($grey, 'lighten-4');
+  height: 100%;
+}
+
+.container {
+  margin: 0;
+  max-width: none;
+  padding: 0 $container-padding;
+  width: 100%;
+}
