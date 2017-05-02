@@ -8,29 +8,31 @@ Hexo theme powered by camembert cookie!
 
 ### Installation
 
-1. Clone theme into your site.
+#### Clone theme into your site.
 ```bash
 $ cd your/hexo/site/directory
 $ git clone https://github.com/sw-jung/hexo-theme-camembert.git themes/camembert
 ```
 
-2. Install dependencies.
+#### Install dependencies.
 ```bash
 $ cd themes/camembert
 $ npm install --production
 ```
 
-3. Install plugins.
+#### Install plugins.
 ```bash
 $ cd ../..
 $ npm install -S hexo-auto-canonical hexo-algolia hexo-generator-feed hexo-renderer-sass hexo-renderer-webpack-2-advanced babel-core babel-loader babel-preset-es2015
 ```
 
-4. Setup configuration
+#### Setup configuration
+
+Setup your site _config.yml.(NOT theme's _config.yml!)
 
 Please see [_config.yml](#_configyml) spec
 
-5. Set theme to camembert
+#### Set theme to camembert
 ```yml
 theme: camembert
 ```
@@ -78,8 +80,8 @@ favicon: favicon.ico
 
 # (Optional) For change default cover images
 cover_image:
-  default: /img/helloquence-51716.jpg
-  home: /img/rsz_dino-reichmuth-98982.jpg
+  default: "/img/helloquence-51716.jpg"
+  home: "/img/rsz_dino-reichmuth-98982.jpg"
   archive:
   tag:
   
@@ -92,13 +94,15 @@ shares: [twitter, facebook, googleplus, pinterest, url]
 
 # (Optional) Sidebar profile background image
 profile:
-  background: /img/ray-hennessy-118049.jpg
+  background: "/img/ray-hennessy-118049.jpg"
 ```
 
 ### Front-matter
 
+```yml
 # Post cover background image
-* `cover_image`: /img/helloquence-51716.jpg
+cover_image: "/img/helloquence-51716.jpg"
+```
 
 ## TODO
 
