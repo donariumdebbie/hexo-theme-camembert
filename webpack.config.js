@@ -21,12 +21,11 @@ module.exports = {
     }]
   },
   plugins: [
-    // TODO: Enable uglify and minify.
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     warnings: false,
-    //     drop_console: false,
-    //   }
-    // })
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_console: false,
+      }
+    })
   ]
 };

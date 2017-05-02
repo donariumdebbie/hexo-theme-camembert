@@ -1,6 +1,7 @@
 const $ = window.$ = window.jQuery = require('jquery');
 require('materialize-css');
 
+import { forEach } from 'lodash';
 import initSocials from './_components/socials';
 import initSearchBar from './_components/search_bar';
 
@@ -52,27 +53,24 @@ function initProxyEvent() {
   });
 }
 
-window.onload = function () {
-  const initModules = [
-    resetCoverHeight,
-    resetPushpin,
-    initSideNav,
-    initProxyEvent,
-    initModal,
-    initMaterialBox,
-    initSocials,
-    initSearchBar
-  ];
+const $window = $(window);
 
-  Promise.all(
-    initModules.map(function (fn) {
-      return Promise.resolve().then(fn);
-    })
-  ).then(() => {
-    // TODO: Hide loader
-  });
-};
-window.onresize = function () {
-  resetCoverHeight();
-  resetPushpin();
-};
+forEach([
+  resetCoverHeight,
+  resetPushpin,
+  initSideNav,
+  initProxyEvent,
+  initModal,
+  initMaterialBox,
+  initSocials,
+  initSearchBar
+], function (module) {
+  $window.load(module);
+});
+
+forEach([
+  resetCoverHeight,
+  resetPushpin
+], function (module) {
+  $window.resize(module);
+});

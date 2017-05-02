@@ -29,7 +29,7 @@
     "lodash": "^4.17.4",
     "materialize-css": "^0.98.2",
     "mdi": "^1.9.33",
-    "striptags": "^3.0.1"
+    "striptags": "^2.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
