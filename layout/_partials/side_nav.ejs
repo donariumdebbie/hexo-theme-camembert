@@ -4,38 +4,7 @@
       <div class="background">
         <%- image_tag(getConfig('profile.background')) %>
       </div>
-      <a href="<%= getConfig('profile.page', '#') %>">
-        <img
-          id="profileImage"
-          class="circle tooltipped"
-          src="<%- gravatar(getConfig('profile.email'), {s: 64}) %>"
-          data-position="right"
-          data-delay="50"
-          data-tooltip="About me">
-      </a>
-      <div class="white-text name">
-        <a
-          href="<%= getConfig('profile.page', '#') %>"
-          class="white-text"
-          data-proxy-event="mouseover mouseout"
-          data-target="#profileImage"><%= getConfig('author') %></a>
-      </div>
-      <div class="comment">
-        <a
-          href="<%= getConfig('profile.page', '#') %>"
-          class="white-text"
-          data-proxy-event="mouseover mouseout"
-          data-target="#profileImage"><%= getConfig('profile.comment', '') %></a>
-      </div>
-      <div class="white-text links">
-        <% _.forEach(getConfig('profile.links'), (link, key) => { %>
-        <a
-          href="<%= link %>"
-          class="mdi mdi-<%= _.toLower(key) %> white-text tooltipped"
-          data-position="bottom"
-          data-delay="50"
-          data-tooltip="<%= key %>"></a>
-        <% }); %>
+      <%- partial('_partials/profile', {imgSize: 64}) %>
       </div>
     </div>
   </li>

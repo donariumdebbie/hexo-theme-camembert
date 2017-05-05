@@ -1,0 +1,18 @@
+<section class="profile">
+  <img
+    class="circle"
+    src="<%- gravatar(getConfig('profile.email'), {s: imgSize}) %>">
+  <div class="name white-text">
+    <span><%= getConfig('author') %></span>
+  </div>
+  <div class="comment white-text">
+    <span><%= getConfig('profile.comment', '') %></span>
+  </div>
+  <div class="links">
+    <% _.forEach(getConfig('profile.links'), (link, key) => { %>
+    <a
+      href="<%= link.url %>"
+      class="<%= link.class %> mdi-24px white-text"></a>
+    <% }); %>
+  </div>
+</section>

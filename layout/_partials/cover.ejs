@@ -16,22 +16,7 @@
     </div>
     <% } else if (is_home()) { %>
     <div class="center">
-      <img
-        id="profileImage"
-        class="circle"
-        src="<%- gravatar(getConfig('profile.email'), {s: 128}) %>">
-      <h4><%= getConfig('author') %></h4>
-      <p><%= getConfig('profile.comment') %></p>
-      <div class="links">
-        <% _.forEach(getConfig('profile.links'), (link, key) => { %>
-        <a
-          href="<%= link %>"
-          class="mdi mdi-<%= _.toLower(key) %> mdi-24px white-text tooltipped"
-          data-position="bottom"
-          data-delay="50"
-          data-tooltip="<%= key %>"></a>
-        <% }); %>
-      </div>
+      <%- partial('_partials/profile', {imgSize: 128}) %>
     </div>
     <% } %>
   </div>

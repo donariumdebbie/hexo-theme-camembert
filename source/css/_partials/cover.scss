@@ -40,6 +40,16 @@
           margin-right: 2rem;
         }
       }
+
+      .profile {
+        .name {
+          @extend h4;
+        }
+
+        .comment {
+          margin: 1rem 0;
+        }
+      }
     }
   }
 
