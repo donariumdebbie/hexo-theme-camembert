@@ -1,11 +1,11 @@
 <div class="nav-wrapper">
   <ul class="left">
-    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Menu">
+    <li>
       <a href="javascript:;" class="waves-effect waves-light side-nav-button" data-activates="menu">
         <i class="mdi mdi-menu"></i>
       </a>
     </li>
-    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="About me">
+    <li>
       <a href="<%= url_for('/') %>" class="waves-effect waves-light">
         <img class="avatar" src="<%- gravatar(getConfig("profile.email"), {s: 40}) %>">
         <span class="hide-on-small-only"><%= getConfig("author") %></span>
@@ -13,7 +13,7 @@
     </li>
   </ul>
   <ul class="right">
-    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Share">
+    <li>
       <a href="javascript:;" class="waves-effect waves-light" data-target="shareModal">
         <i class="mdi mdi-share-variant"></i>
       </a>
