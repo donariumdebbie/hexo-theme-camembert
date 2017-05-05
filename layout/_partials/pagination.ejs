@@ -6,8 +6,8 @@
   const end = _.min([offset + limit, page.total]);
   function href(i, label = i) {
     if (i < 1 || i > page.total || i === current) return 'javascript:;';
-    else if (i === 1) return '/#main';
-    else return `${getConfig('pagination_dir')}/${i}#main`;
+    else if (i === 1) return url_for('/#main');
+    else return url_for(`/${getConfig('pagination_dir')}/${i}#main`);
   }
 %>
 <ul class="pagination">

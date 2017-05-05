@@ -17,7 +17,7 @@
     const posts = archive[1];
     const count = posts.length;
     const date = moment(archive[0], dateFormat).locale(locale);
-    const url = url_for(`archives/${date.format('YYYY')}/${date.format('MM')}`);
+    const url = url_for(`/archives/${date.format('YYYY')}/${date.format('MM')}`);
   %>
   <li class="archive-list-item">
     <a href="<%= url %>" class="archive-list-link waves-effect">

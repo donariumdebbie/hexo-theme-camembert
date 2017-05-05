@@ -6,7 +6,7 @@
       </a>
     </li>
     <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="About me">
-      <a href="<%= getConfig("profile.page", "#") %>" class="waves-effect waves-light">
+      <a href="<%= url_for('/') %>" class="waves-effect waves-light">
         <img class="avatar" src="<%- gravatar(getConfig("profile.email"), {s: 40}) %>">
         <span class="hide-on-small-only"><%= getConfig("author") %></span>
       </a>
