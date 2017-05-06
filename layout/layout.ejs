@@ -1,18 +1,18 @@
 <%
   const pageIs = (() => {
     if (is_home()) return 'home';
-    else if (is_post()) return 'post';
     else if (is_archive()) return 'archive';
     else if (is_category()) return 'category';
     else if (is_tag()) return 'tag';
+    else return 'post';
   })();
 
   const pageTitle = (() => {
     if (is_home()) return __('home');
-    else if (is_post()) return page.title;
     else if (is_archive()) return [__('archive'), page.year, page.month].filter((i) => !_.isUndefined(i)).join('/');
     else if (is_category()) return `${__('category')}/${page.category}`;
     else if (is_tag()) return `${__('tag')}/${page.tag}`;
+    else return page.title;
   })();
 
   const coverLayout = (() => {
