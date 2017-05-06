@@ -40,8 +40,12 @@ time {
     display: inline;
   }
 
-  & > *:not(:last-child) {
-    margin-right: 1rem;
+  a {
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
   }
 }
 
