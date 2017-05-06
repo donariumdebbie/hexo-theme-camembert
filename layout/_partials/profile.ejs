@@ -8,7 +8,8 @@
     <% _.forEach(getConfig('profile.links'), (link, key) => { %>
     <a
       href="<%= link.url %>"
-      class="<%= link.class %> mdi-24px white-text"></a>
+      class="<%= link.class %> mdi-24px white-text"
+      title="<%= key %>"></a>
     <% }); %>
   </div>
 </section>
