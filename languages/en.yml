@@ -14,3 +14,6 @@ post:
 
 share:
   title: Share this page
+
+ccl:
+  message: This contents licensed under CC %s 4.0
