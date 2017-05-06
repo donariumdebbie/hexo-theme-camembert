@@ -8,6 +8,7 @@
 
   .tag-list-item {
     @extend .btn-flat;
+    border: 1px solid;
     height: 1.4rem;
     line-height: 1.4rem;
     margin: 0 1px;

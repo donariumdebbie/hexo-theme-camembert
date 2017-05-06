@@ -27,6 +27,7 @@
     }
 
     .tag-list {
+      .tag-list-item,
       a {
         color: map-get($grey, 'base');
       }
