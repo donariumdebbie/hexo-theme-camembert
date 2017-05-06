@@ -16,7 +16,7 @@
     const label = archive[0];
     const posts = archive[1];
     const count = posts.length;
-    const date = moment(archive[0], dateFormat).locale(locale);
+    const date = moment(archive[0], dateFormat, locale);
     const url = url_for(`/archives/${date.format('YYYY')}/${date.format('MM')}`);
   %>
   <li class="archive-list-item">
