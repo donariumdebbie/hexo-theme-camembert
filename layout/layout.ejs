@@ -8,11 +8,11 @@
   })();
 
   const pageTitle = (() => {
-    if (is_home()) return 'Posts';
+    if (is_home()) return __('home');
     else if (is_post()) return page.title;
-    else if (is_archive()) return ['Archive', page.year, page.month].filter((i) => !_.isUndefined(i)).join('/');
-    else if (is_category()) return `Category/${page.category}`;
-    else if (is_tag()) return `Tag/${page.tag}`;
+    else if (is_archive()) return [__('archive'), page.year, page.month].filter((i) => !_.isUndefined(i)).join('/');
+    else if (is_category()) return `${__('category')}/${page.category}`;
+    else if (is_tag()) return `${__('tag')}/${page.tag}`;
   })();
 
   const coverLayout = (() => {

@@ -1,6 +1,6 @@
 <%
   const dateFormat = 'MMM YYYY';
-  const locale = 'en';
+  const locale = page.lang;
   const archives = _(site.posts.map(post => post)).groupBy(function (post) {
     return post.date.locale(locale).format(dateFormat);
   })

@@ -1,0 +1,15 @@
+home: 홈
+archive: 아카이브
+category: 카테고리
+tag: 태그
+toc: 목차
+
+search:
+  placeholder: 검색
+  notFound: 포스트를 찾을 수 없습니다
+
+post:
+  more: 더보기
+
+share:
+  title: 이 페이지를 공유하세요

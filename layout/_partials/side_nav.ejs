@@ -8,13 +8,18 @@
       </div>
     </div>
   </li>
-  <li><a href="<%= url_for('/') %>" class="waves-effect"><i class="mdi mdi-home"></i>Home</a></li>
+  <li>
+    <a href="<%= url_for('/') %>" class="waves-effect">
+      <i class="mdi mdi-home"></i>
+      <span><%= __('home') %></span>
+    </a>
+  </li>
   <li class="no-padding">
     <ul class="collapsible collapsible-accordion">
       <li>
         <a class="collapsible-header waves-effect">
           <i class="mdi mdi-archive"></i>
-          <span>Archives</span>
+          <span><%= __('archive') %></span>
           <i class="mdi mdi-chevron-down right"></i>
         </a>
         <div class="collapsible-body">
@@ -24,7 +29,7 @@
       <li>
         <a class="collapsible-header waves-effect">
           <i class="mdi mdi-tag-multiple"></i>
-          <span>Tags</span>
+          <span><%= __('tag') %></span>
           <i class="mdi mdi-chevron-down right"></i>
         </a>
         <div class="collapsible-body">
@@ -36,7 +41,7 @@
 
   <% if (is_post()) { %>
   <li><div class="divider"></div></li>
-  <li><a class="subheader">Table of Contents</a></li>
+  <li><a class="subheader"><%= __('toc') %></a></li>
   <li><%- toc(page.content) %></li>
   <% } %>
 </ul>

@@ -1,7 +1,7 @@
 <div class="nav-wrapper">
   <form id="searchForm" action="javascript:;">
     <div class="input-field">
-      <input type="search" placeholder="Search">
+      <input type="search" placeholder="<%= __('search.placeholder') %>">
       <label class="label-icon" for="search">
         <i class="mdi mdi-magnify"></i>
       </label>
@@ -21,7 +21,7 @@
           data-index-name="<%= getConfig('algolia.indexName') %>"
           data-target="#algoliaResult">
           <div class="input-field">
-            <input type="search" placeholder="Search">
+            <input type="search" placeholder="<%= __('search.placeholder') %>">
             <label class="label-icon" for="search">
               <i class="mdi mdi-magnify"></i>
             </label>
@@ -35,7 +35,7 @@
     </nav>
   </div>
   <div class="modal-content">
-    <p id="algoliaEmpty" class="center grey-text hide">No posts found</p>
+    <p id="algoliaEmpty" class="center grey-text hide"><%= __('search.notFound') %></p>
     <ul
       id="algoliaResult"
       class="posts collection"

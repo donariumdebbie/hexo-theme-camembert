@@ -7,7 +7,7 @@
       <time><%= date(post.date) %></time>
       <p class="post-summary">
         <span><%= truncate(strip_html(post.excerpt || post.content), { length: 200 }) %></span>
-        <a href="<%= url_for(post.path) %>" class="more">Read more</a>
+        <a href="<%= url_for(post.path) %>" class="more"><%= __('post.more') %></a>
       </p>
       <%- list_tags(post.tags, { show_count: false }) %>
     </li>

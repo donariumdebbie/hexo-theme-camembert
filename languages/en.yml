@@ -1,0 +1,16 @@
+home: Home
+archive: Archive
+category: Category
+tag: Tag
+toc: Table of Contents
+
+search:
+  placeholder: Search
+  by: Search by
+  notFound: No posts found
+
+post:
+  more: Read more
+
+share:
+  title: Share this page
