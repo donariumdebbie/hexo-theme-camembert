@@ -2,12 +2,8 @@
   <img
     class="circle"
     src="<%- gravatar(getConfig('profile.gravatar'), {s: imgSize}) %>">
-  <div class="name white-text">
-    <span><%= getConfig('author') %></span>
-  </div>
-  <div class="comment white-text">
-    <span><%= getConfig('profile.comment', '') %></span>
-  </div>
+  <div class="name white-text"><%= getConfig('author') %></div>
+  <div class="comment white-text"><%- getConfig('profile.comment', '') %></div>
   <div class="links">
     <% _.forEach(getConfig('profile.links'), (link, key) => { %>
     <a
