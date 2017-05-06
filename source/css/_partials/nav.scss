@@ -18,14 +18,18 @@ nav {
   ul {
     a {
       &:hover {
-        background-color: $white-shaded-0;
+        background-color: $white-shaded-1;
       }
     }
   }
 
-  .avatar {
-    @extend .circle;
-    max-height: $navbar-height / 2;
-    vertical-align: middle;
+  .brand-logo {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+
+    img {
+      max-height: $navbar-height / 2;
+      vertical-align: middle;
+    }
   }
 }

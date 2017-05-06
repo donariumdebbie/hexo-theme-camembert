@@ -6,9 +6,8 @@
       </a>
     </li>
     <li>
-      <a href="<%= url_for('/') %>" class="waves-effect waves-light">
-        <img class="avatar" src="<%- gravatar(getConfig("profile.email"), {s: 40}) %>">
-        <span class="hide-on-small-only"><%= getConfig("author") %></span>
+      <a href="<%= url_for('/') %>" class="waves-effect waves-light brand-logo">
+        <span><%= getConfig("title") %></span>
       </a>
     </li>
   </ul>
