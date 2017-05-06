@@ -46,16 +46,19 @@ Done! Please enjoy your blog!
 # _config.yml
 author: "<Your name>"
 profile:
-  page: "About page's url ex) /about-me/"
-  email: "your@email.com"
-  comment: "Comment here."
+  background: "/img/ray-hennessy-118049.jpg"
+  gravatar: your@email.com
+  comment: "Software Developer"
   links:
-    # You can extend this like.
-    # <label & mdi icon name(It to be lower)>: <href>
-    # ex) Facebook: "https://facebook.com"
-    Email: "mailto:your@email.com"
-    GitHub: "https://github.com/"
-    RSS: /atom.xml
+    Email:
+      url: "mailto:your@email.com"
+      class: "mdi mdi-email"
+    GitHub:
+      url: https://github.com/
+      class: "mdi mdi-github-circle"
+    RSS:
+      url: /atom.xml
+      class: "mdi mdi-rss"
 
 feed:
   type: atom
@@ -91,10 +94,6 @@ flow_text: true
 # (Optional, default [twitter, facebook, googleplus, pinterest, url]) For share modal.
 # Support twitter, facebook, googleplus, pinterest, url, email, whatsapp
 shares: [twitter, facebook, googleplus, pinterest, url]
-
-# (Optional) Sidebar profile background image
-profile:
-  background: "/img/ray-hennessy-118049.jpg"
 ```
 
 ### Front-matter
