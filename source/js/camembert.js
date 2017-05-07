@@ -53,6 +53,18 @@ function initProxyEvent() {
   });
 }
 
+function initAbbr() {
+  $('abbr').each(function () {
+    const $this = $(this);
+    $this.tooltip({
+      delay: 50,
+      position: 'top',
+      tooltip: $this.attr('title')
+    });
+    $this.attr('title', '');
+  });
+}
+
 const $window = $(window);
 
 forEach([
@@ -62,6 +74,7 @@ forEach([
   initProxyEvent,
   initModal,
   initMaterialBox,
+  initAbbr,
   initSocials,
   initSearchBar
 ], function (module) {
