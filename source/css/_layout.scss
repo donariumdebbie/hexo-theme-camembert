@@ -10,3 +10,9 @@ body {
   padding: 0 $container-padding;
   width: 100%;
 }
+
+.post {
+  article {
+    margin-top: $container-padding / 2;
+  }
+}

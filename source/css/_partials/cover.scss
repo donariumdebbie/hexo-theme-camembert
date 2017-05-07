@@ -15,7 +15,7 @@
 
     .cover-content {
       background-color: $black-shaded-4;
-      padding: $container-padding;
+      padding: $container-padding / 2 $container-padding;
 
       * {
         color: map-get($shades, 'white');
