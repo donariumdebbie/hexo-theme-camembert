@@ -4,6 +4,7 @@ require('materialize-css');
 import { forEach } from 'lodash';
 import initSocials from './_components/socials';
 import initSearchBar from './_components/search_bar';
+import { initAbbr, initFootnote } from './_components/markdown_it';
 
 function resetPushpin() {
   $('.pushpin').each(function () {
@@ -44,37 +45,16 @@ function initSideNav() {
   $('.side-nav-button').sideNav({ closeOnClick: true });
 }
 
-function initProxyEvent() {
-  $('[data-proxy-event]').each(function () {
-    const $this = $(this);
-    $this.on($this.data('proxy-event'), (e) => {
-      $($this.data('target')).trigger(e.type);
-    });
-  });
-}
-
-function initAbbr() {
-  $('abbr').each(function () {
-    const $this = $(this);
-    $this.tooltip({
-      delay: 50,
-      position: 'top',
-      tooltip: $this.attr('title')
-    });
-    $this.attr('title', '');
-  });
-}
-
 const $window = $(window);
 
 forEach([
   resetCoverHeight,
   resetPushpin,
+  initAbbr,
+  initFootnote,
   initSideNav,
-  initProxyEvent,
   initModal,
   initMaterialBox,
-  initAbbr,
   initSocials,
   initSearchBar
 ], function (module) {
