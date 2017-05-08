@@ -48,6 +48,7 @@
 
         .comment {
           margin: 1rem 0;
+          max-width: 300px;
         }
       }
     }
@@ -95,6 +96,7 @@
 
       .cover-content {
         margin: auto;
+        padding: $container-padding / 2 $container-padding / 2;
       }
     }
   }
