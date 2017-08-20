@@ -107,7 +107,8 @@ cover_image: "/img/helloquence-51716.jpg"
 
 * [ ] Complete README.md
 * [ ] Optimize sources
-* [ ] i18n
 * [ ] Automatically optimize image size&quality
 * [ ] Add thumbnails to post list
 * [ ] Support category
+* [ ] Support hexo's tag plugins - blockquote, pull quote, ...
+* [ ] Support abbr filter
