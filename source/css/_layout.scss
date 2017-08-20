@@ -14,5 +14,9 @@ body {
 .post {
   article {
     margin-top: $container-padding / 2;
+
+    ul {
+      @extend .browser-default;
+    }
   }
 }
