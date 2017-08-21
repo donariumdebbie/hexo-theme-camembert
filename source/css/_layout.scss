@@ -16,7 +16,11 @@ body {
     margin-top: $container-padding / 2;
 
     ul {
-      @extend .browser-default;
+      padding-left: 40px;
+      
+      li {
+        list-style-type: disc;
+      }
     }
   }
 }
