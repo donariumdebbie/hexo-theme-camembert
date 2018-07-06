@@ -4,20 +4,13 @@ body {
   height: 100%;
 }
 
-.container {
-  margin: 0;
-  max-width: none;
-  padding: 0 $container-padding;
-  width: 100%;
-}
-
 .post {
   article {
     margin-top: $container-padding / 2;
 
     ul {
       padding-left: 40px;
-      
+
       li {
         list-style-type: disc;
       }

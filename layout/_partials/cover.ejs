@@ -6,18 +6,20 @@
 %>
 <div class="cover-background" style="background-image:url(<%= coverImage %>)">
   <div class="cover-content">
-    <% if (!is_home()) { %>
-    <h1><%= pageTitle %></h1>
-    <% } %>
-    <% if (is_post()) { %>
-    <div class="metadata">
-      <time><%= date(page.date) %></time>
-      <%- page.tags ? list_tags(page.tags, { show_count: false }) : '' %>
+    <div class="container">
+      <% if (!is_home()) { %>
+      <h1><%= pageTitle %></h1>
+      <% } %>
+      <% if (is_post()) { %>
+      <div class="metadata">
+        <time><%= date(page.date) %></time>
+        <%- page.tags ? list_tags(page.tags, { show_count: false }) : '' %>
+      </div>
+      <% } else if (is_home()) { %>
+      <div class="center">
+        <%- partial('_partials/profile', {imgSize: 128}) %>
+      </div>
+      <% } %>
     </div>
-    <% } else if (is_home()) { %>
-    <div class="center">
-      <%- partial('_partials/profile', {imgSize: 128}) %>
-    </div>
-    <% } %>
   </div>
 </div>
